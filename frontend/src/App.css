@@ -1,0 +1,90 @@
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-cream);
+}
+
+/* --- Brand mark, floating top-left, no box, just a hand-drawn wordmark --- */
+
+.app__brand {
+  position: fixed;
+  top: 26px;
+  left: 28px;
+  z-index: 6;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.app__brand-name {
+  position: relative;
+  font-family: var(--font-mark);
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--accent-teal);
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.6);
+  transform: rotate(-3deg);
+}
+
+.app__brand-underline {
+  position: absolute;
+  left: 2px;
+  bottom: -9px;
+  width: 100%;
+  height: 12px;
+}
+
+.app__brand-spark {
+  font-size: 1.1rem;
+  color: var(--accent-peach);
+  transform: translateY(-2px) rotate(12deg);
+  animation: spark-twinkle 2.6s ease-in-out infinite;
+}
+
+@keyframes spark-twinkle {
+  0%, 100% { opacity: 0.55; transform: translateY(-2px) rotate(12deg) scale(0.9); }
+  50% { opacity: 1; transform: translateY(-4px) rotate(12deg) scale(1.1); }
+}
+
+/* --- Floating panels, no background, no border --- */
+
+.app__panel {
+  position: fixed;
+  z-index: 5;
+}
+
+.app__panel--top-right {
+  top: 26px;
+  right: 26px;
+}
+
+.app__panel--bottom-left {
+  bottom: 26px;
+  left: 26px;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 560px) {
+  .app__brand {
+    top: 18px;
+    left: 18px;
+  }
+
+  .app__brand-name {
+    font-size: 1.5rem;
+  }
+
+  .app__panel--top-right {
+    top: 16px;
+    right: 16px;
+  }
+
+  .app__panel--bottom-left {
+    bottom: 16px;
+    left: 16px;
+  }
+}

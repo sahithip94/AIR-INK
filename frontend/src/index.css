@@ -1,0 +1,119 @@
+/* ==========================================================================
+   AirInk — Global Design Tokens
+   A soft, playful pastel canvas — sticker-bright colors, chunky rounded
+   type, and a hand-crafted feel (inspired by pastel font-bundle art:
+   blush pink, mint, peach, cream, with a deep teal accent).
+   ========================================================================== */
+
+:root {
+  /* --- Palette --- */
+  --bg-cream: #FBF3EC;
+  --bg-blush: #FCE7EE;
+  --bg-mint: #E4F3EE;
+  --bg-peach: #FDE6D6;
+
+  --accent-pink: #F783B0;
+  --accent-hot-pink: #F2508F;
+  --accent-peach: #FFB98A;
+  --accent-mint: #8FD9C4;
+  --accent-teal: #1E5A50;
+  --accent-yellow: #FFD873;
+
+  --text-dark: #362E2B;
+  --text-soft: #746A66;
+  --text-muted: #A79C97;
+  --white: #FFFFFF;
+
+  --border-hairline: rgba(54, 46, 43, 0.1);
+  --glass-fill: rgba(255, 255, 255, 0.55);
+  --glass-fill-strong: rgba(255, 255, 255, 0.75);
+
+  --success: #4FBE8D;
+  --danger: #F0625F;
+
+  /* --- Typography --- */
+  --font-display: 'Baloo 2', 'Kalam', system-ui, sans-serif;
+  --font-body: 'Kalam', system-ui, sans-serif;
+  --font-mark: 'Permanent Marker', cursive;
+
+  /* --- Layout --- */
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --radius-pill: 999px;
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 160ms;
+  --dur-med: 320ms;
+  --dur-slow: 900ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-cream);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--accent-pink);
+  color: var(--white);
+}
+
+/* Soft scrollbar to match the theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(54, 46, 43, 0.15);
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(54, 46, 43, 0.25);
+}
+
+/* Respect reduced-motion preferences across the whole app */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

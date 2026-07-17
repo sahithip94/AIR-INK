@@ -1,0 +1,44 @@
+.instructions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  text-align: right;
+}
+
+.instructions__row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  font-size: 0.88rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.instructions__icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.instructions__gesture {
+  color: var(--text-dark);
+}
+
+.instructions__arrow {
+  color: var(--accent-hot-pink);
+}
+
+.instructions__action {
+  color: var(--text-soft);
+}
+
+@media (max-width: 560px) {
+  .instructions__row {
+    font-size: 0.75rem;
+    gap: 5px;
+  }
+}
