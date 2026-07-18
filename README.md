@@ -16,6 +16,7 @@ Air Ink is a browser-based virtual drawing application that allows users to draw
 - 💻 Clean and interactive user interface
 
 ---
+## pictures of the project are in the screenshot folder
 
 ## 🛠️ Tech Stack
 
